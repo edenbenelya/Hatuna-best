@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אישור הגעה - עדן ואחינעם</title>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gold: #c5a36c;
+            --soft-bg: #f9f7f2;
+            --text-dark: #4a4a4a;
+            --white: #ffffff;
+        }
+
+        body { 
+            font-family: 'Assistant', sans-serif; 
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0; 
+            padding: 20px;
+            color: var(--text-dark);
+        }
+
+        .card { 
+            background: var(--white); 
+            max-width: 480px; 
+            width: 100%; 
+            border-radius: 24px; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08); 
+            overflow: hidden; 
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .header-img { 
+            width: 100%; 
+            height: auto; 
+            display: block;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .form-container { padding: 40px 30px; }
+
+        h1 { 
+            font-weight: 300; 
+            font-size: 28px; 
+            margin-bottom: 30px; 
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .field { margin-bottom: 25px; text-align: right; }
+
+        label { 
+            display: block; 
+            margin-bottom: 10px; 
+            font-weight: 600; 
+            font-size: 15px;
+            color: #666;
+        }
+
+        input[type="text"], select { 
+            width: 100%; 
+            padding: 14px; 
+            border: 1px solid #e0e0e0; 
+            border-radius: 12px; 
+            font-size: 16px; 
+            box-sizing: border-box;
+            background: #fcfcfc;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--primary-gold);
+            background: #fff;
+        }
+
+        /* עיצוב הסעות - בחירה מרובה */
+        .transport-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 12px;
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .option input {
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+            accent-color: var(--primary-gold);
+        }
+
+        button { 
+            background: var(--primary-gold); 
+            color: white; 
+            border: none; 
+            padding: 18px; 
+            border-radius: 12px; 
+            font-size: 18px; 
+            font-weight: 600;
+            cursor: pointer; 
+            width: 100%; 
+            transition: all 0.3s;
+            margin-top: 10px;
+            box-shadow: 0 4px 15px rgba(197, 163, 108, 0.3);
+        }
+
+        button:hover { 
+            background: #b3925d; 
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(197, 163, 108, 0.4);
+        }
+
+        .footer-text {
+            text-align: center;
+            font-size: 13px;
+            color: #aaa;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <img src="https://lh3.googleusercontent.com/d/1v6P4tdt628haMUYLevMSyRcCOiS_gP955AJLllcBiZsi0NY" alt="הזמנה" class="header-img">
+    
+    <div class="form-container">
+        <h1>נשמח לחגוג איתכם!</h1>
+        
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSeor6iYH28aoSWcVnIgLa37sd4GEqOGRpj7pzn95wimdK8Fhg/formResponse" method="POST">
+            
+            <div class="field">
+                <label>שם מלא</label>
+                <input type="text" name="entry.1659691051" required placeholder="כפי שמופיע בהזמנה">
+            </div>
+
+            <div class="field">
+                <label>האם תגיעו?</label>
+                <select name="entry.1398272720" required>
+                    <option value="" disabled selected>בחרו אפשרות...</option>
+                    <option value="כן">כן, נגיע בשמחה! 🎉</option>
+                    <option value="לא">לצערי לא נוכל להגיע</option>
+                    <option value="אולי">עדיין לא סגורים על זה</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label>מספר אורחים</label>
+                <select name="entry.1661179165">
+                    <option value="1">1</option>
+                    <option value="2" selected>2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label>שירות הסעות (ניתן לבחור הלוך וחזור)</label>
+                <div class="transport-grid">
+                    <label class="option"><input type="checkbox" name="entry.1689034380" value="הלוך מתל אביב"> הלוך ת"א</label>
+                    <label class="option"><input type="checkbox" name="entry.1689034380" value="חזור מתל אביב"> חזור ת"א</label>
+                    <label class="option"><input type="checkbox" name="entry.1689034380" value="הלוך ממזכרת בתיה"> הלוך מזכרת</label>
+                    <label class="option"><input type="checkbox" name="entry.1689034380" value="חזור ממזכרת בתיה"> חזור מזכרת</label>
+                </div>
+            </div>
+
+            <button type="submit">אישור הגעה</button>
+        </form>
+        
+        <div class="footer-text">נתראה בשמחות!‏</div>
+    </div>
+</div>
+
+</body>
+</html>
