@@ -136,12 +136,60 @@
             color: #aaa;
             margin-top: 20px;
         }
+        /* עיצוב כפתור ה-Waze */
+        .waze-container {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f0f4f8;
+            border-radius: 12px;
+        }
+        
+        .waze-link {
+            display: inline-flex;
+            align-items: center;
+            background-color: #33ccff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        
+        .waze-link:hover {
+            transform: scale(1.05);
+        }
+        
+        /* עיצוב המלצת הלבוש */
+        .dress-code-note {
+            font-size: 0.95em;
+            color: #666;
+            background: #fff9e6;
+            padding: 12px;
+            border-right: 4px solid var(--primary-gold);
+            margin: 15px 0;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
 
 <div class="card">
     <img src="Wedding_invite.jpg" alt="הזמנה" class="header-img">
+    
+    <div class="info-section">
+        <div class="waze-container">
+            <p><strong>ניפגש בשמחות!</strong></p>
+            <a href="https://waze.com/ul/hsv8dgn0bq" target="_blank" class="waze-link">
+                🚗 ניווט ליעד עם Waze
+            </a>
+        </div>
+    
+        <div class="dress-code-note">
+            ✨ <strong>טיפ קטן מהזוג:</strong> האירוע מתקיים תחת כיפת השמיים ובשטח פתוח. אנחנו ממליצים בחום להגיע בנעליים שטוחות ונוחות כדי שתוכלו לרקוד איתנו עד הבוקר!
+        </div>
+    </div>
     
     <div class="form-container">
         <h1>נשמח לחגוג איתכם!</h1>
@@ -150,7 +198,7 @@
             
             <div class="field">
                 <label>שם מלא</label>
-                <input type="text" name="entry.1659691051" required placeholder="כפי שמופיע בהזמנה">
+                <input type="text" name="entry.1659691051">
             </div>
 
             <div class="field">
